@@ -1,0 +1,180 @@
+/******************************************
+/* CSS
+/*******************************************/
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #121212;
+  --text-color-dark: #ffffff;
+  --button-text-color-light: #000000;
+  --button-text-color-dark: #ffffff;
+
+ }
+
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+
+button {
+  float: right;
+  background: none; 
+  color: var(--button-text-color-light); 
+  border: 1px solid rgb(33, 165, 165);
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  outline: 1px solid transparent; 
+  transition: color 0.3s, outline 0.3s;
+}
+
+button:hover {
+ border: 1px solid grey;
+ border-radius: 5px;
+}
+
+button:focus {
+  /* outline: 1px solid #007BFF; Visible outline when focused for accessibility */
+}
+
+body.dark-mode button {
+  color: var(--button-text-color-dark); 
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.container {
+  max-width: 60%;
+/* border: 5px solid red; */
+margin: 100px auto 20px auto;
+
+}
+
+div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+nav {
+  margin-top: 30px;
+ width: 20%; 
+height: 100%;
+}
+
+hr {
+  color: black;
+  height: 200px;
+  border-left: 1px dashed grey;
+}
+
+main {
+  width: 600px;
+  text-align: left;
+}
+
+.main-nav {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+a {
+  color: rgb(33, 165, 165);
+ 
+}
+
+a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+li {
+  list-style: none;
+}
+
+/* .to-do-list {
+ list-style: decimal;
+} */
+
+h3 {
+  margin: 0;
+}
+ 
+img {
+  max-width: 600px;
+}
+
+
+footer {
+  margin: 200px auto 20px auto;
+  text-align: center;
+}
+
+.social-links {
+  width: 170px;
+  margin: 20px auto 20px auto;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.no-idea {
+  font-size: 1.5rem;
+margin-top: 100px;
+}
+
+.standup-nav-links {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.standup-nav-link-first {
+  width: 100%;
+  margin-right: 0;
+}
+
+.daily-headings {
+  text-decoration: underline;
+}
+
+
+
+/*********************************** 
+          MEDIA QUERIES
+*************************************/
+
+@media (max-width: 600px) {
+  hr {
+      display: none;
+  }
+}
+
+/* You can also hide hr on larger screens if needed */
+@media (min-width: 600px) and (max-width: 1333px) {
+  hr {
+      display: none;
+  }
+}
+
+
