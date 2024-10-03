@@ -19,8 +19,8 @@
 
 body {
   background-color: var(--background-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
 
 }
 
@@ -48,9 +48,6 @@ button:hover {
  border-radius: 5px;
 }
 
-button:focus {
-  /* outline: 1px solid #007BFF; Visible outline when focused for accessibility */
-}
 
 body.dark-mode button {
   color: var(--button-text-color-dark); 
@@ -62,38 +59,45 @@ body.dark-mode button {
 /*******************************************/
 
 .container {
-  max-width: 60%;
-/* border: 5px solid red; */
-margin: 100px auto 20px auto;
+width: 60%;
+margin: 0 auto;
+padding-top: 100px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
 
+  /* height: 800px; */
 }
 
-div {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
 nav {
-  margin-top: 30px;
+ margin-top: 30px;
+
  width: 20%; 
-height: 100%;
+ flex-grow: 1;
 }
 
 hr {
   color: black;
   height: 200px;
   border-left: 1px dashed grey;
+  border-right: 1px dashed grey;
 }
 
 main {
   width: 600px;
   text-align: left;
+  flex-grow: 2;
 }
 
 .main-nav {
   font-size: 20px;
   line-height: 28px;
+}
+
+h1 {
+
+  margin-bottom: 60px;
 }
 
 a {
@@ -110,9 +114,14 @@ li {
   list-style: none;
 }
 
-/* .to-do-list {
- list-style: decimal;
-} */
+
+/************************************************** 
+                 Hamburger ??
+*************************************************/
+/************************************************** 
+                 Hamburger End
+*************************************************/
+
 
 h3 {
   margin: 0;
@@ -138,7 +147,7 @@ footer {
 /* ADDITIONAL STYLES
 /*******************************************/
 .no-idea {
-  font-size: 1.5rem;
+font-size: 1.5rem;
 margin-top: 100px;
 }
 
@@ -164,17 +173,83 @@ margin-top: 100px;
           MEDIA QUERIES
 *************************************/
 
-@media (max-width: 600px) {
-  hr {
-      display: none;
-  }
-}
+ 
 
-/* You can also hide hr on larger screens if needed */
+/* Tablets */
 @media (min-width: 600px) and (max-width: 1333px) {
   hr {
-      display: none;
+  display: none;
   }
+
+  .container {
+    padding-top: 20px;
+  width: 70%;
+  flex-direction: column;
+    /* align-content: space-between; */
+   
+ }
+
+  div {
+  flex-direction: column;
+  }
+
+  nav {
+  margin-top: 30px;
+  width: 80%; 
+  height: 100%;
+  }
+
+  .main-ul {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    justify-content: left;
+  }
+  
+
+
+main {
+  margin: 0 auto;
+  width: 85%;
+  
 }
 
+p, h1 {
+  font-size: 20px;
+}
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  hr {
+   display: none;
+  }
+
+  .container {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .main-ul {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    justify-content: space-around;
+  }
+
+  .social-links  {
+    width: 100%;
+    }
+
+  main {
+    width: 100%;
+    /* text-align: left; */
+  } 
+
+}
+
+/****************************************************** 
+            Hamburger media
+****************************************************/
 
